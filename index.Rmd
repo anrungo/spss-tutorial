@@ -1,0 +1,1140 @@
+---
+title: "SPSS - Tutorial para Iniciantes"
+subtitle: "⚔ - Mestrado em Saúde Pública <br>"
+author: "<br/>António Rungo"
+institute: "<br/>Faculdade de Medicina, MSP"
+date: "Abril-Maio 2022 (updated: `r Sys.Date()`)"
+encoding: "UTF-8"
+header-includes:
+   - \usepackage{tcolorbox}
+   - \usepackage{amsmath}
+output:
+  #xaringan::summon_remark(to = "/libs")
+  xaringan::moon_reader:
+    includes:
+      after_body: insert-logo.html
+    chakra: libs/remark-latest.min.js
+    css: ["css/default.css", "css/msp.css" , "css/msp-fonts.css"]
+    lib_dir: libs
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    favicon: favicon-32x32.png   
+---
+layout: true
+  
+<div class="my-footer"><span>
+
+<a href=https://antoniorungo.com/">antoniorungo.com</a> - Email: <a href="tony.niquisse@gmail.com">tony.niquisse@gmail.com</a>
+</span></div>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 24px;
+    <!--padding: 1em 4em 1em 4em;-->
+}
+</style>
+
+
+
+---
+class: inverse, middle
+background-color: #fafaf3
+text-color: white
+.header[]
+
+### 
+
+
+```{r, work_flow, fig.show="hold", out.width="100%", echo=FALSE, warning=FALSE,message=FALSE}
+knitr::include_graphics("img/fig1.PNG")
+
+# knitr::include_graphics("commcare.png")
+# 
+# knitr::include_graphics("dhis.png")
+```
+
+
+---
+class: center
+
+### 
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig2.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig3.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig4.png")
+```
+
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig5.png")
+```
+
+
+---
+class: middle 
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig6.png")
+```
+
+
+
+---
+class: middle 
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig7.png")
+```
+
+
+
+---
+class: middle
+
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig8.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig9.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%", fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig10.png")
+```
+
+
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig11.png")
+```
+
+
+
+---
+class: middle
+
+### 
+
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig12.png")
+```
+
+
+
+---
+class: middle
+
+### 
+
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig12.png")
+```
+
+
+
+
+---
+class: middle
+
+### 
+
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig13.png")
+```
+
+
+
+---
+class: middle
+
+### Janela de execução de um comando
+
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig14.png")
+```
+
+
+
+
+---
+class: middle
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig15.png")
+```
+
+
+---
+class: middle
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig16.png")
+```
+
+
+
+---
+class: middle
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig17.png")
+```
+
+
+
+---
+class: middle
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig18.png")
+```
+
+
+
+
+---
+class: middle
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig19.png")
+```
+
+
+
+---
+class: middle
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig20.png")
+```
+
+
+
+
+---
+class: middle
+
+### Como criar uma Variável
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig21.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig22.png")
+```
+
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig23.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig24.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig25.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig26.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig27.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig28.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig29.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig30.png")
+```
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig31.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig32.png")
+```
+
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig33.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig34.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig35.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig36.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig37.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig38.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig39.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig40.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig41.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig42.png")
+```
+
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig43.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig44.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig45.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig46.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig47.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig48.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig49.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig50.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig51.png")
+```
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig52.png")
+```
+
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig53.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig54.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig55.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig56.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig57.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig58.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig59.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig60.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig61.png")
+```
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig62.png")
+```
+
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig63.png")
+```
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig64.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig65.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig66.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig67.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig68.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig69.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig70.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig71.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig72.png")
+```
+
+---
+class: middle
+
+### 
+
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig73.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig74.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig75.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig76.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig77.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig78.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig79.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig80.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig81.png")
+```
+
+---
+class: middle
+
+### 
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig82.png")
+```
+
+---
+class: middle
+
+### 
+
+
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig83.png")
+```
+
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig84.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig85.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig86.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig87.png")
+```
+
+---
+class: middle
+
+### 
+
+```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"}
+knitr::include_graphics("img/fig88.png")
+```
+
+
+<!-- --- -->
+<!-- class: middle -->
+
+<!-- ###  -->
+
+<!-- ```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"} -->
+<!-- knitr::include_graphics("img/fig29.png") -->
+<!-- ``` -->
+
+<!-- --- -->
+<!-- class: middle -->
+
+<!-- ###  -->
+
+<!-- ```{r, echo=FALSE, out.width="100%",fig.align='center', fig.cap="<center><b>  </b></center>"} -->
+<!-- knitr::include_graphics("img/fig30.png") -->
+<!-- ``` -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
