@@ -4,7 +4,7 @@
     <title>SPSS - Tutorial para Iniciantes</title>
     <meta charset="utf-8" />
     <meta name="author" content=" António Rungo" />
-    <script src="libs/header-attrs-2.21/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.26/header-attrs.js"></script>
     <link rel="stylesheet" href="css/default.css" type="text/css" />
     <link rel="stylesheet" href="css/msp.css" type="text/css" />
     <link rel="stylesheet" href="css/msp-fonts.css" type="text/css" />
@@ -26,7 +26,7 @@ class: center, middle, inverse, title-slide
 ### <br/>Faculdade de Medicina, MSP
 ]
 .date[
-### Abril-Maio 2023 (updated: 2023-04-25)
+### Abril-Maio
 ]
 
 ---
@@ -58,7 +58,6 @@ text-color: white
 
 &lt;img src="img/fig1.PNG" width="100%" /&gt;
 
-PDF version for download is available [here:](https://github.com/anrungo/spss-tutorial/raw/main/index.pdf)
 
 ---
 class: center
@@ -1313,6 +1312,33 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+<style>
+.logo {
+  background-image: url(logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0.01em;
+  right: 0.6em;
+  width: 90px;
+  height: 90px;
+  z-index: 1;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {

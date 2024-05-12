@@ -3,7 +3,7 @@ title: "SPSS - Tutorial para Iniciantes"
 subtitle: "⚔ - Mestrado em Saúde Pública <br>"
 author: "<br/>António Rungo"
 institute: "<br/>Faculdade de Medicina, MSP"
-date: "Abril-Maio 2022 (updated: `r Sys.Date()`)"
+date: "Abril-Maio" # (2022 updated: `r Sys.Date()`)"
 encoding: "UTF-8"
 header-includes:
    - \usepackage{tcolorbox}
